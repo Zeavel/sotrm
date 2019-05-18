@@ -45,6 +45,7 @@ client2.on("guildMemberAdd", f=>{
     .setDescription("<@"+f.id+">, приветствую тебя на сервере **"+f.guild.name+"**!\n\n**"+f.guild.name+"** - это закрытый сервер.\nВсе наши участники - адекватные и взрослые люди.\n\n**_Строгая и справедливая администрация\nЖивое и приятное общение\nИнсайдерская информация\nТрансляция магазина Королевской битвы\nОповещения о легендарных PvE миссиях\nУникальная система званий\nЕженедельные топы и конкурсы\nАвторский бот для максимальной автоматизации и удобства_**\n\n          **Добро пожаловать!**")
     .setImage("https://media.discordapp.net/attachments/579293533995794444/579301934670938125/logo.png")
     .setFooter("DØNUT", "https://triche-generateur.fr/wp-content/uploads/2018/10/unnamed.jpg")
+    .setThumbnail(f.guild.iconURL)
     f.send(embed)
 })
 
