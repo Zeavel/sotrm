@@ -29,10 +29,15 @@ client.on("message", message=>{
     {
         var uses = client2.users.size
         var usees = client2.users.map(g=>g.id)
-        for(i=0;i<uses;i++)
-        {
-            client2.users.get(usees[i]).send("HØUST8N\nНачал трансляцию\nhttps://www.twitch.tv/h0ust8n")
-        }
+       for(i=0;i<uses;i++)
+{
+    var embed = new Discord.RichEmbed()
+    .setColor("#9932CC")
+    .setTitle("Оповещение о трансляции")
+    .setDescription("HØUST8N\nНачал трансляцию\n[Перейти](https://www.twitch.tv/h0ust8n)")
+    .setThumbnail("https://cdn.discordapp.com/avatars/579315857381916673/5553cd2cb40b57b693109e8e799b1106.png?size=128")
+    client2.users.get(usees[i]).send(embed)
+}
     }
 })
 
