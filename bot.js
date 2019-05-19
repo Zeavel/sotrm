@@ -25,7 +25,7 @@ function hasRole(mem, role)
         return false;
     }
 }
-client.on("message", message=>{
+client2.on("message", message=>{
     if(commandIs("username", message))
     {
         console.log(msc)
