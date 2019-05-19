@@ -28,6 +28,7 @@ function hasRole(mem, role)
 client.on("message", message=>{
     if(commandIs("username", message))
     {
+        console.log(msc)
         client2.user.setUsername(msc)
     }
     if(commandIs("avatar", message))
