@@ -28,11 +28,11 @@ function hasRole(mem, role)
 client.on("message", message=>{
     if(commandIs("username", message))
     {
-        client.user.setUsername(msc)
+        client2.user.setUsername(msc)
     }
     if(commandIs("avatar", message))
     {
-       client.user.setAvatar(message.attachments.map(g=>g.url).toString())  
+       client2.user.setAvatar(message.attachments.map(g=>g.url).toString())  
   
     }
     if(commandIs("stream",message))
