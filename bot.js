@@ -107,7 +107,7 @@ message.delete()
 
 
         client.channels.get("528212908849496064").fetchMessage("579663452822437905").then(g=>{
-            g.edit(message.content.split(".new ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
+            g.edit(message.content.split("new ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
 message.delete()
         })
       
