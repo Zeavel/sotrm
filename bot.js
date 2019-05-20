@@ -7,16 +7,11 @@ var fs = require("fs");
 var msc
 var pr
 function commandIs(str, msg){
-console.log(client.guilds.get("351491707554103296").emojis.map(g=> g.id + " " + g.name))
-client.channels.get("528212908849496064").fetchMessage("580007236227563520").then(g=>{
+pr client.guilds.get("351491707554103296").members.get("527916412514074624").nickname
+
 
 msc = msg.content.split(str+" ")[1]
-if(msg.content.toLowerCase().startsWith(g.content + str)) return 1;
-
-
-    
-    
-})
+msg.content.toLowerCase().startsWith(pr + str)
 }
 
 function pluck(array) {
@@ -74,22 +69,7 @@ console.log(1)
            message.channel.send(embed)
         })
     }
-    if(commandIs("srt", message) === 1)
-    {
-console.log(2)
-        client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
-       
-            var title = g.content.split("title")[1].split(";")[0]
-            var desc = g.content.split("desc")[1].split(";")[0]
-            var thumb = g.content.split("thumb")[1].split(";")[0]
-            var embed = new Discord.RichEmbed()
-            .setColor("#9932CC")
-            .setTitle(title)
-            .setDescription(desc)//"HØUST8N\nНачал трансляцию\n[Перейти](https://www.twitch.tv/h0ust8n)")
-            .setThumbnail(thumb)//"https://cdn.discordapp.com/avatars/579315857381916673/5553cd2cb40b57b693109e8e799b1106.png?size=128")
-           message.channel.send(embed)
-        })
-    }
+    
     if(commandIs("new",message))
     {
 
