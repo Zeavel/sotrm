@@ -11,7 +11,7 @@ pr = client.guilds.get("351491707554103296").members.get("527916412514074624").n
 console.log(pr + str)
 
 msc = msg.content.split(str+" ")[1]
-msg.content.toLowerCase().startsWith(pr + str)
+return msg.content.toLowerCase().startsWith(pr + str)
 }
 
 function pluck(array) {
