@@ -29,7 +29,7 @@ function hasRole(mem, role)
     {
         return false;
     }
-}
+}//g
 client3.on("message", message=>{
     if(commandIs("username", message))
     {
