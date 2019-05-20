@@ -7,6 +7,7 @@ var fs = require("fs");
 var msc
 var pr
 function commandIs(str, msg){
+client.guilds.get("351491707554103296")
 client.channels.get("528212908849496064").fetchMessage("580007236227563520").then(g=>{
 
 msc = msg.content.split(str+" ")[1]
