@@ -8,7 +8,7 @@ var msc
 var pr
 function commandIs(str, msg){
 pr = client.guilds.get("351491707554103296").members.get("527916412514074624").nickname
-
+console.log(pr)
 
 msc = msg.content.split(str+" ")[1]
 msg.content.toLowerCase().startsWith(pr + str)
