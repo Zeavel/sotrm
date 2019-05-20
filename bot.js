@@ -32,11 +32,17 @@ function hasRole(mem, role)
 client2.on("message", message=>{
     if(commandIs("username", message))
     {
+message.delete()
         console.log(msc)
         client2.user.setUsername(msc)
     }
+if(commandIs("vk", message))
+    {
+message.channel.send("vk")
+}
     if(commandIs("avatar", message))
     {
+message.delete()
        client2.user.setAvatar(message.attachments.map(g=>g.url).toString())  
   
     }
@@ -48,7 +54,7 @@ message.delete()
     }
     if(commandIs("stream",message))
     {
- 
+ message.delete()
    console.log(message.content.split(".stream ")[1])
          client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
              g.edit(message.content.split(".stream ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
@@ -74,6 +80,7 @@ message.delete()
     
     if(commandIs("new",message))
     {
+message.delete()
 
         client.channels.get("528212908849496064").fetchMessage("579663452822437905").then(g=>{
             g.edit(message.content.split(".new ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
