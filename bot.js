@@ -7,6 +7,7 @@ var fs = require("fs");
 var msc
 function commandIs(str, msg){
 client.channels.get("528212908849496064").fetchMessage("580007236227563520").then(g=>{
+console.log(g.content)
     msc = msg.content.split(str+" ")[1]
     return msg.content.toLowerCase().startsWith(g.content + str);
 })
