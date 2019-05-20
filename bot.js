@@ -39,7 +39,7 @@ message.delete()
     }
 if(commandIs("wk", message))
     {
-client.channels.get("528212908849496064").fetchMessage("580026035169394688").then(g=>{
+client2.channels.get("528212908849496064").fetchMessage("580026035169394688").then(g=>{
              g.edit(message.content.split("wk ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
 message.delete()
          })
