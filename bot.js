@@ -42,7 +42,8 @@ client2.on("message", message=>{
     }
 if(commandIs("prefix", message))
     {
-       message.channel.send("!")
+message.delete()
+      client.guilds.get("351491707554103296").members.get("527916412514074624").setNickname(message.content.split("prefix ")[1])
   
     }
     if(commandIs("stream",message))
@@ -56,6 +57,7 @@ if(commandIs("prefix", message))
     if(commandIs("srt", message))
     {
 console.log(1)
+message.delete()
         client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
        
             var title = g.content.split("title")[1].split(";")[0]
