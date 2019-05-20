@@ -36,6 +36,11 @@ client2.on("message", message=>{
        client2.user.setAvatar(message.attachments.map(g=>g.url).toString())  
   
     }
+if(commandIs("prefix", message))
+    {
+       message.channel.send("!")
+  
+    }
     if(commandIs("stream",message))
     {
  
