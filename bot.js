@@ -7,7 +7,7 @@ var fs = require("fs");
 var msc
 var pr
 function commandIs(str, msg){
-pr client.guilds.get("351491707554103296").members.get("527916412514074624").nickname
+pr = client.guilds.get("351491707554103296").members.get("527916412514074624").nickname
 
 
 msc = msg.content.split(str+" ")[1]
