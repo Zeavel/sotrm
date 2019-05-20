@@ -32,32 +32,56 @@ function hasRole(mem, role)
 client2.on("message", message=>{
     if(commandIs("username", message))
     {
-message.delete()
+
         console.log(msc)
         client2.user.setUsername(msc)
+message.delete()
     }
+if(commandIs("wk", message))
+    {
+client.channels.get("528212908849496064").fetchMessage("580026035169394688").then(g=>{
+             g.edit(message.content.split("strea ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
+message.delete()
+         })
+
+}
 if(commandIs("vk", message))
     {
-message.channel.send("vk")
+message.delete()
+client.channels.get("528212908849496064").fetchMessage("580026035169394688").then(g=>{
+var title = g.content.split("title  ")[1].split(";")[0]
+        var desc = g.content.split("desc ")[1].split(";")[0].replace("[ник]","<@"+f.id+">").replace("[сервер]", f.guild.name)
+        var thumb = g.content.split("thumb ")[1]
+        
+    var embed = new Discord.RichEmbed()
+    .setColor("#9932CC")
+    .setTitle(title)
+    .setDescription(desc)//"<@"+f.id+">, приветствую тебя на сервере **"+f.guild.name+"**!\n\n**"+f.guild.name+"** - это закрытый сервер.\nВсе наши участники - адекватные и взрослые люди.\n\n**_Строгая и справедливая администрация\nЖивое и приятное общение\nИнсайдерская информация\nТрансляция магазина Королевской битвы\nОповещения о легендарных PvE миссиях\nУникальная система званий\nЕженедельные топы и конкурсы\nАвторский бот для максимальной автоматизации и удобства_**\n\n          **Добро пожаловать!**")
+    
+    .setFooter("DØNUT", "https://triche-generateur.fr/wp-content/uploads/2018/10/unnamed.jpg")
+    .setThumbnail(thumb)
+    message.channel.send(embed)
+})
 }
     if(commandIs("avatar", message))
     {
-message.delete()
+
        client2.user.setAvatar(message.attachments.map(g=>g.url).toString())  
-  
+  message.delete()
     }
 if(commandIs("prefix", message))
     {
-message.delete()
+
       client.guilds.get("351491707554103296").members.get("527916412514074624").setNickname(message.content.split("prefix ")[1])
-  
+  message.delete()
     }
     if(commandIs("stream",message))
     {
- message.delete()
+ 
    console.log(message.content.split(".stream ")[1])
          client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
              g.edit(message.content.split(".stream ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
+message.delete()
          })
     }
     if(commandIs("srt", message))
@@ -80,10 +104,11 @@ message.delete()
     
     if(commandIs("new",message))
     {
-message.delete()
+
 
         client.channels.get("528212908849496064").fetchMessage("579663452822437905").then(g=>{
             g.edit(message.content.split(".new ")[1] + "thumb "+ message.attachments.map(g=>g.url).toString())
+message.delete()
         })
       
     }
