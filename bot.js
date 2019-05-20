@@ -10,7 +10,7 @@ function commandIs(str, msg){
 client.channels.get("528212908849496064").fetchMessage("580007236227563520").then(g=>{
 
 msc = msg.content.split(str+" ")[1]
-if(msg.content.toLowerCase().startsWith(g.content + str)) return true;
+if(msg.content.toLowerCase().startsWith(g.content + str)) return 1;
 
 
     
@@ -73,7 +73,7 @@ console.log(1)
            message.channel.send(embed)
         })
     }
-    if(commandIs("srt", message) == true)
+    if(commandIs("srt", message) === 1)
     {
 console.log(2)
         client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
