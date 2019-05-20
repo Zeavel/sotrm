@@ -6,7 +6,7 @@ const client2 = new Discord.Client();
 var fs = require("fs");
 var msc
 function commandIs(str, msg){
-client.channels.get("528212908849496064").fetchMessage("579670100014137354").then(g=>{
+client.channels.get("528212908849496064").fetchMessage("580007236227563520").then(g=>{
     msc = msg.content.split(str+" ")[1]
     return msg.content.toLowerCase().startsWith(g.content + str);
 })
